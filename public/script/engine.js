@@ -1,11 +1,12 @@
-/* Write a Hangman game that displays a secret word as a list of hidden letters. Also display an alphabet of letters that the user can guess while trying to guess the word. After a letter is used, disable that letter from the alphabet so the user will not try to guess the same letter twice. When a guess matches one or more letters in the secret word, reveal those letters to the user. Keep track of the number of incorrect guesses and end the game if the number of incorrect guesses reaches 6. If the user reveals all of the hidden letters before reaching 6 incorrect guesses, then the user wins. */
-
-/* wrap everything in a function so that the DOM loads before any Javascript runs, like this: $(function(){}); */
 $(function(){
-  var questionBank=new Array;
-  var wordArray=new Array;
-  var previousGuesses=new Array;
-  var currentWord;
-  var currentClue;
-  var wrongAnswerCount;
+  // Select random word to guess
+  function getWord(){
+    var randomWord = new Array('precious','filthy','dusty','letters','north','apologise','tacit','pedal','grate','bubble','responsible','stamp','minute','reply','excite','panoramic','crayon','secretary','wobble','water','unknown','locket','fixed','lighten','sturdy','outstanding','cobweb','spare','record','makeshift','wrong','greet','growth','advice','quarter','moldy','glamorous','adorable','hilarious','puzzled','street','unwritten','berserk','history','tangible','visitor','approve','organic','known','breath','berry','sense','testy','question','repeat','connect','point','comparison','brave','paddle','volatile','tricky','grateful','uncle','creepy','quartz','metal','belong','sweltering','vacation','quirky','unnatural','humdrum','manage','promise','jelly','strip','married','waste','javascript');
+    return randomWord[Math.floor(Math.random()*randomWord.length)];
+  };
+  $(function(){
+    $('#onscreen-keyboard button').on('click', function(event){
+        $(event.target).removeClass('un-clicked').addClass('is-clicked').html('-');
+    });
+  });
 });

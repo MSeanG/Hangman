@@ -1,12 +1,12 @@
-// display secret word as list of hidden letters
-/* Write a Hangman game that displays a secret word as a list of hidden letters. Also display an alphabet of letters that the user can guess while trying to guess the word. After a letter is used, disable that letter from the alphabet so the user will not try to guess the same letter twice. When a guess matches one or more letters in the secret word, reveal those letters to the user. Keep track of the number of incorrect guesses and end the game if the number of incorrect guesses reaches 6. If the user reveals all of the hidden letters before reaching 6 incorrect guesses, then the user wins. */
-//var letters = $('#glyphs');
-//console.log(letters);
-// for (var i = 0; i < 26; i++) {
-//     var newletter = $('<a>')
-//}
-alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-//console.log(alphabet);
-for (var i = 0; i < alphabet.length; i++){
-    $('#glyphs').append('<a>' + alphabet[i]);
-}
+// Select random word to guess
+// Hide the JavaScript warning and help panel
+// Display the game controls and help icon
+// Toggle the help panel on and off
+// Display the current score
+// Select a random word and build the alphabetic keypad when New Game is pressed
+// Check whether the selected letter is in the word
+// If the guess is correct, replace the appropriate dash(es) with the selected letter
+// If the guess is wrong, add another element to the gallows or victim
+// End the game when the word is complete or the limit of bad guesses is exceeded
+// Update and display the score
+// Reset wins and losses to zero when Clear Score is pressed

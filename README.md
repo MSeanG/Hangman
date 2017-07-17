@@ -6,3 +6,6 @@ https://trello.com/b/UH3AibCl/wdi11-project-1
 
 wireframe:
 vhttps://github.com/MSeanG/Hangman/blob/master/public/image/wireframe.pdf
+
+goals:
+to make a working game

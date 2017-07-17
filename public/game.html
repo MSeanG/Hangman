@@ -1,39 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Hangman Game</title>
+        <title>Hangman</title>
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" type="text/css"  href="style/layout/reset.css">
-        <link rel="stylesheet" type="text/css"  href="style/layout/responsive.css">
-        <link rel="stylesheet" type="text/css"  href="style/colors/graphite-raised.css">
-        <link rel="stylesheet" type="text/css"  href="style/colors/alabaster-flat.css">
+        <link rel="stylesheet" type="text/css" href="style/layout.css">
+        <link rel="stylesheet" type="text/css" href="style/colors.css">
     </head>
     <body>
-        <div class="outer_">
-            <div class="middle">
-                <div class="_inner">
-                    <form action="" method="" name="gallows" id="game-board">
-                        <fieldset id="herald">
-                            <legend>HANGMAN</legend>
-                        </fieldset>
-                        <fieldset id="secret">
-                            <label>Secret Word</label>
-                        </fieldset>
-                        <fieldset id="inputs">
-                            <label>Key Board</label>
-                        </fieldset>
-                    </form>
-					<div id="date">Friday July 14, 2017</div><!--date-->
-				</div><!-- class="_inner"-->
-			</div><!-- class="middle"-->
-		</div><!-- class="outer_"-->
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
+        <section class="outer_">
+            <section class="middle">
+                <section class="_inner">
+                    <section id="game-board">
+                        <h1>HANGMAN</h1>
+                        <p id="warning">Javascript must be enables to play this game.</p>
+                        <div id="help">?</div>
+                        <div id="help-text">
+                            <h2>How to play</h2>
+                            <div id="close"></div>
+                            <p>Hangman is a word-guessing game. Click or tap New Game to display the letters on a keyboard and a row of dashes indincating the length of the word to be guessed. Select a letter. If it's in the word, it replaces the dash(es). Each wrong guess results in a part being added to the victim on the gallows. Your goal is to guess the word before the person is completely rendered.</p>
+                        </div>
+                        <!--<p id="loading">Game loading...</p>-->
+                        <div id="gallows">
+                            <div id="hangman" class="img0"></div>
+                        </div>
+
+                        <p id="hidden-word"><h2>&nbsp;<span></span>&nbsp;</h2></p>
+                        <section id="onscreen-keyboard">
+                            <!--<h2>Keyboard</h2>-->
+                            <div id="onscreen-keyboard-row-top" class="onscreen-keyboard-row">
+                                <button class="un-clicked" id="q">Q</button>
+                                <button class="un-clicked" id="w">W</button>
+                                <button class="un-clicked" id="e">E</button>
+                                <button class="un-clicked" id="r">R</button>
+                                <button class="un-clicked" id="t">T</button>
+                                <button class="un-clicked" id="y">Y</button>
+                                <button class="un-clicked" id="u">U</button>
+                                <button class="un-clicked" id="i">I</button>
+                                <button class="un-clicked" id="o">O</button>
+                                <button class="un-clicked" id="p">P</button>
+                            </div>
+                            <!--/end id="onscreen-keyboard-row-top"-->
+                            <div id="onscreen-keyboard-row-mid" class="onscreen-keyboard-row">
+                                <button class="un-clicked" id="a">A</button>
+                                <button class="un-clicked" id="s">S</button>
+                                <button class="un-clicked" id="d">D</button>
+                                <button class="un-clicked" id="f">F</button>
+                                <button class="un-clicked" id="g">G</button>
+                                <button class="un-clicked" id="h">H</button>
+                                <button class="un-clicked" id="j">J</button>
+                                <button class="un-clicked" id="k">K</button>
+                                <button class="un-clicked" id="l">L</button>
+                            </div>
+                            <!--/end id="onscreen-keyboard-row-mid"-->
+                            <div id="onscreen-keyboard-row-bot" class="onscreen-keyboard-row">
+                                <button class="un-clicked" id="z">Z</button>
+                                <button class="un-clicked" id="x">X</button>
+                                <button class="un-clicked" id="c">C</button>
+                                <button class="un-clicked" id="v">V</button>
+                                <button class="un-clicked" id="b">B</button>
+                                <button class="un-clicked" id="n">N</button>
+                                <button class="un-clicked" id="m">M</button>
+                            </div>
+                            <div id="game-controls" class="onscreen-keyboard-row">
+                                <button id="start" class="btn">New Game</button>
+                                <button is="clear" class="btn">Clear Score</button>
+                            </div>
+                        </section>
+                    </section>
+                    <!--/end id="game-board"-->
+                    </section>
+                <!--/end class="_inner"-->
+            </section>
+            <!--/end class="middle"-->
+        </section>
+        <!--/end class="outer_"-->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <!--<script type="text/javascript" src="script/word-list.js"></script>-->
         <script type="text/javascript" src="script/engine.js"></script>
+
     </body>
 </html>
